@@ -1,15 +1,23 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 const Navbar = () => {
-  var location = useLocation();
-  useEffect(() => {
-    console.log(location.pathname);
-  }, [location]);
+  let history = useHistory();
+  var location = useLocation(); //usage of useloaction hook
+  const handleLogout = () => {
+    //remove token from localstorage
+    localStorage.removeItem("token");
+    history.push("/login");
+  };
+  // useEffect(() => {
+  //   console.log(location.pathname);
+  // }, [location]);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          <img src="https://www.cloudnotes.io/wp-content/uploads/2019/04/cropped-cluud-notes-logo-1.png" alt="" width={60} height={60}/>
+          <Link className="navbar-brand mx-4" to="/">
             iNotebook
           </Link>
           <button
@@ -23,30 +31,63 @@ const Navbar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            className="collapse navbar-collapse"
+            id="navbarSupportedContent"
+            style={{ marginLeft: 100 }}
+          >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className={`nav-link ${location.pathname==="/"?"active":" "}`} aria-current="page" to="/">
+              <li className="nav-item" style={{ marginLeft: 100 }}>
+                <Link
+                  className={`nav-link ${
+                    location.pathname === "/" ? "active" : " "
+                  }`}
+                  aria-current="page"
+                  to="/"
+                >
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className={`nav-link ${location.pathname==="/about"?"active":" "}`} to="/about">
+              <li className="nav-item" style={{ marginLeft: 100 }}>
+                <Link
+                  className={`nav-link ${
+                    location.pathname === "/about" ? "active" : " "
+                  }`}
+                  to="/about"
+                >
                   About
                 </Link>
               </li>
             </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
+            {!localStorage.getItem("token") ? (
+              <form className="d-flex" style={{ marginLeft: 50 }}>
+                <Link
+                  className="btn btn-primary mx-5"
+                  to="/login"
+                  role="button"
+                >
+                  LOGIN
+                </Link>
+                <Link
+                  className="btn btn-primary mx-5"
+                  to="/register"
+                  role="button"
+                >
+                  REGISTER
+                </Link>
+                {/* <button style={{marginLeft:100}} className="btn btn-outline-success" type="submit">
+                LOGIN
               </button>
-            </form>
+              <button  style={{marginLeft:100}} className="btn btn-outline-success" type="submit">
+                REGISTER
+              </button> */}
+              </form>
+            ) : (
+              <button className="btn btn-primary mx-5" onClick={handleLogout}>
+                LOGOUT
+              </button>
+              // if already login than logout 
+            )}
           </div>
         </div>
       </nav>

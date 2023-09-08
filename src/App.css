@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-image: url("https://www.free-mockup.com/wp-content/uploads/edd/2018/02/Notebook-Emboss-Logo-Mockup-1500x1157.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .App-logo {
@@ -40,3 +43,4 @@
 i{
   cursor: pointer;
 }
+

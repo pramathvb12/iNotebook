@@ -1,13 +1,26 @@
 import React from "react";
 
-const Alert = () => {
+function Alert(props) {
+  //Using the alert component.
   return (
-    <div>
-      <div className="alert alert-primary" role="alert">
-        A simple primary alert—check it out!
+    props.alert && (
+      <div
+        class={`alert alert-${props.alert.type} alert-dismissible fade show my-2`}
+        role="alert"
+      >
+        {props.alert.type}
+        <strong> : {props.alert.msg}</strong>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          {/* <span aria-hidden="true">&times;</span> */}
+        </button>
       </div>
-    </div>
+    )
   );
-};
+}
 
 export default Alert;

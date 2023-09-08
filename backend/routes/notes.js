@@ -20,8 +20,8 @@ router.post(
   "/addnotes",
   fetchuser,
   [
-    body("title", "Enter a Valid title").isLength({ min: 3 }),
-    body("description", "Description must be more than 5").isLength({ min: 5 }),
+    body("title", "Enter a Valid title").isLength({ min: 1 }),
+    body("description", "Description must be more than 1").isLength({ min: 1 }),
   ],
   async (req, res) => {
     try {
@@ -54,8 +54,8 @@ router.put(
   "/updatenotes/:id",
   fetchuser,
   [
-    body("title", "Enter a Valid title").isLength({ min: 3 }),
-    body("description", "Description must be more than 5").isLength({ min: 5 }),
+    body("title", "Enter a Valid title").isLength({ min: 1 }),
+    body("description", "Description must be more than 1").isLength({ min: 1 }),
   ],
   async (req, res) => {
     try {
