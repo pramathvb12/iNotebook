@@ -5,7 +5,12 @@ const port = 5000; //setting the port
 var cors = require("cors"); // importing cros
 
 connectMongo(); // connecting to mongo
-app.use(cors()); // Cross-Origin Resource Sharing is a mechanism by which a front-end client can make requests for resources to an external back-end server.
+app.use(cors({
+  origin :[""],
+  methods:["POST","GET","PUT","DELETE"],
+  credentials:"true"
+ }
+  )); // Cross-Origin Resource Sharing is a mechanism by which a front-end client can make requests for resources to an external back-end server.
 app.use(express.json()); //use express json formater
 app.get("/", (req, res) => {
   //get request
