@@ -6,7 +6,7 @@ var cors = require("cors"); // importing cros
 
 connectMongo(); // connecting to mongo
 app.use(cors({
-  origin :[""],
+  origin :["https://i-notebook-api-three.vercel.app/"],
   methods:["POST","GET","PUT","DELETE"],
   credentials:"true"
  }
