@@ -28,6 +28,12 @@ const About = () => {
         <br />
         For more info contact us.
       </p>
+      <br />
+      <br />
+     <div className="container" style={{marginLeft:"25%"}}>
+      <p> <b>-- pramath v b</b> </p>
+      <p>Developer of iNotebook.</p>
+      </div> 
     </div>
   );
 };

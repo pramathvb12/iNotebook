@@ -47,7 +47,7 @@ const Login = (props) => {
           textShadow: "2px 2px black",
         }}
       >
-        Login for iNotebook to continue  !!!
+        Login for iNotebook to continue !!!
       </h3>
       <div
         className="container my-4"
