@@ -4,7 +4,7 @@ import Notes from "./Notes";
 const Home = (props) => {
   const { showAlert } = props; //destructure
   return (
-    <div>
+    <div className="home">
       {/* passing notes with props */}
       <Notes showAlert={showAlert} />
     </div>

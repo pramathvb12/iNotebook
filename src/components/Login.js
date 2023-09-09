@@ -38,38 +38,64 @@ const Login = (props) => {
     setCredential({ ...credential, [e.target.name]: [e.target.value] });
   };
   return (
-    <div className="container my-4">
-      <h3 className="container my-4">Login for iNotebook to continue!!!</h3>
-      {/* use onSubmit in form */}
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="email">Email address</label>
-          <input
-            name="email"
-            type="email"
-            className="form-control"
-            id="email"
-            aria-describedby="emailHelp"
-            value={credential.email}
-            onChange={onChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            name="password"
-            type="password"
-            className="form-control"
-            id="password"
-            value={credential.password}
-            onChange={onChange}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
-    </div>
+    <>
+      <h3
+        className="container my-4"
+        style={{
+          textAlign: "center",
+          color: "white",
+          textShadow: "2px 2px black",
+        }}
+      >
+        Login for iNotebook to continue  !!!
+      </h3>
+      <div
+        className="container my-4"
+        style={{
+          color: "white",
+          border: "3pt solid white",
+          fontStyle: "italic",
+          width: "50%",
+          height: "50%",
+          borderRadius: "5%",
+          boxShadow: "25px 15px 5px black",
+          textShadow: "2px 2px black",
+        }}
+      >
+        {/* use onSubmit in form */}
+        <form
+          onSubmit={handleSubmit}
+          style={{ margin: "10%", fontSize: "100%" }}
+        >
+          <div className="form-group">
+            <label htmlFor="email">Email address :</label>
+            <input
+              name="email"
+              type="email"
+              className="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              value={credential.email}
+              onChange={onChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password :</label>
+            <input
+              name="password"
+              type="password"
+              className="form-control"
+              id="password"
+              value={credential.password}
+              onChange={onChange}
+            />
+          </div>
+          <button type="submit" className="btn btn-primary mt-3">
+            Login
+          </button>
+        </form>
+      </div>
+    </>
   );
 };
 

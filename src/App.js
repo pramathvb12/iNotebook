@@ -8,6 +8,9 @@ import Alert from "./components/Alert";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import { useState } from "react";
+import Footer from "./components/Footer";
+
+
 function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (msg, type) => {
@@ -24,7 +27,7 @@ function App() {
       <NoteState>
         <Router>
           <Navbar />
-          <Alert alert={alert}/>
+          <Alert alert={alert} />
           <div className="container">
             <Switch>
               <Route exact path="/">
@@ -41,6 +44,7 @@ function App() {
               </Route>
             </Switch>
           </div>
+          <Footer />
         </Router>
       </NoteState>
     </>

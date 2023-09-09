@@ -1,8 +1,10 @@
 .App {
   text-align: center;
-  background-image: url("https://www.free-mockup.com/wp-content/uploads/edd/2018/02/Notebook-Emboss-Logo-Mockup-1500x1157.jpg");
+  /* background-image: url("https://www.free-mockup.com/wp-content/uploads/edd/2018/02/Notebook-Emboss-Logo-Mockup-1500x1157.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
+  scrollbar-width: none;
+  overflow-y: hidden;
 }
 
 .App-logo {
@@ -44,3 +46,12 @@ i{
   cursor: pointer;
 }
 
+body{
+  background-color: #578cf7;
+  font-family:cursive;
+  /* background-image: url("./pen-4337521-800-min.jpg");
+  background-repeat: no-repeat;
+  background-position: 10 0;
+  background-size: cover; */
+
+}

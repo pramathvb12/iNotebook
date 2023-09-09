@@ -43,66 +43,90 @@ const Register = (props) => {
     setCredential({ ...credential, [e.target.name]: [e.target.value] });
   };
   return (
-    <div className="container mt-4">
-      <h3 className="container my-4">
+    <>
+      <h3
+        className="container my-4"
+        style={{
+          textAlign: "center",
+          color: "white",
+          textShadow: "2px 2px black",
+        }}
+      >
         Register for iNotebook to continue which is free
       </h3>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">User Name</label>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            aria-describedby="emailHelp"
-            name="name"
-            value={credential.name}
-            onChange={onChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            aria-describedby="emailHelp"
-            name="email"
-            value={credential.email}
-            onChange={onChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            name="password"
-            value={credential.password}
-            onChange={onChange}
-            required
-            minLength={5}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="confpassword">Confirm Password</label>
-          <input
-            type="password"
-            className="form-control"
-            name="confpassword"
-            id="confpassword"
-            value={credential.confpassword}
-            onChange={onChange}
-            required
-            minLength={5}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
-    </div>
+      <div
+        className="container mt-4"
+        style={{
+          color: "white",
+          border: "3pt solid white",
+          fontStyle: "italic",
+          width: "50%",
+          height: "50%",
+          borderRadius: "5%",
+          boxShadow: "25px 15px 5px black",
+          textShadow: "2px 2px black",
+        }}
+      >
+        <form
+          onSubmit={handleSubmit}
+          style={{ margin: "10%", fontSize: "100%" }}
+        >
+          <div className="form-group">
+            <label htmlFor="name">User Name :</label>
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              aria-describedby="emailHelp"
+              name="name"
+              value={credential.name}
+              onChange={onChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email address :</label>
+            <input
+              type="email"
+              className="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              name="email"
+              value={credential.email}
+              onChange={onChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password :</label>
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              name="password"
+              value={credential.password}
+              onChange={onChange}
+              required
+              minLength={5}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="confpassword">Confirm Password :</label>
+            <input
+              type="password"
+              className="form-control"
+              name="confpassword"
+              id="confpassword"
+              value={credential.confpassword}
+              onChange={onChange}
+              required
+              minLength={5}
+            />
+          </div>
+          <button type="submit" className="btn btn-primary mt-3">
+            Register
+          </button>
+        </form>
+      </div>
+    </>
   );
 };
 

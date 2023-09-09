@@ -14,9 +14,15 @@ const Navbar = () => {
   // }, [location]);
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <img src="https://www.cloudnotes.io/wp-content/uploads/2019/04/cropped-cluud-notes-logo-1.png" alt="" width={60} height={60}/>
+          <img
+            src="https://www.cloudnotes.io/wp-content/uploads/2019/04/cropped-cluud-notes-logo-1.png"
+            alt=""
+            width={60}
+            height={60}
+            style={{ borderRadius: "30%" }}
+          />
           <Link className="navbar-brand mx-4" to="/">
             iNotebook
           </Link>
@@ -86,7 +92,7 @@ const Navbar = () => {
               <button className="btn btn-primary mx-5" onClick={handleLogout}>
                 LOGOUT
               </button>
-              // if already login than logout 
+              // if already login than logout
             )}
           </div>
         </div>

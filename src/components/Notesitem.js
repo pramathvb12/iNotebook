@@ -6,14 +6,28 @@ const Notesitem = (props) => {
   const context = useContext(noteContext);
   const { deleteNote } = context;
   return (
-    <div className="col md-3">
-      <div className="card my-3">
+    <div className="row mx-3">
+      <div
+        className="card my-3"
+        style={{
+          color: "black",
+          border: "2pt solid black",
+          width: "fit-content",
+          borderRadius: "15px",
+          boxShadow: "10px 10px 5px black",
+          textShadow: "2px 2px white",
+        }}
+      >
         <div className="card-body">
-          <h5 className="card-title">{note.title}</h5>
+          <h4 className="card-title">{note.title}</h4>
           <p className="card-text">{note.description}</p>
+          <p className="card-text">{note.tag}</p>
           <i
             className="fa-solid fa-trash mx-3"
-            onClick={() => {deleteNote(note._id); props.showAlert("Deleted note Sucessful", "success");}}
+            onClick={() => {
+              deleteNote(note._id);
+              props.showAlert("Deleted note Sucessful", "success");
+            }}
           ></i>
           <i
             className="fa-solid fa-pen-to-square mx-3"

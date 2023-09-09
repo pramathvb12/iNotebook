@@ -157,9 +157,21 @@ const NotesCompo = (props) => {
         </div>
       </div>
       <div className="container">
-        <h2>Details of notes</h2>
+        <h2
+          className="container my-4"
+          style={{
+            textAlign: "center",
+            color: "white",
+            textShadow: "2px 2px black",
+          }}
+        >
+          Details of Added Notes
+        </h2>
         <div className="row my-3" style={{ margintop: "16px" }}>
-          <div className="container">
+          <div
+            className="container mx-4"
+            style={{ textAlign: "center", color: "white" }}
+          >
             {notes.length === 0 && "No Notes to Display"}
           </div>
           {notes.map((notes) => {

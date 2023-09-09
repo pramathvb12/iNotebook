@@ -21,13 +21,34 @@ const Addnote = (props) => {
     setNote({ ...note, [e.target.name]: [e.target.value] });
   };
   return (
-    <div>
-      <div className="container">
-        <h2>Add Note</h2>
-        <form>
+    <>
+      <h3
+        className="container my-4"
+        style={{
+          textAlign: "center",
+          color: "white",
+          textShadow: "2px 2px black",
+        }}
+      >
+        Add Your Note Here
+      </h3>
+      <div
+        className="container"
+        style={{
+          color: "white",
+          border: "3pt solid white",
+          fontStyle: "italic",
+          width: "50%",
+          height: "50%",
+          borderRadius: "5%",
+          boxShadow: "25px 15px 5px black",
+          textShadow: "2px 2px black",
+        }}
+      >
+        <form style={{ margin: "10%", fontSize: "100%" }}>
           <div className="mb-3">
             <label htmlFor="title" className="form-label">
-              Title
+              Title :
             </label>
             <input
               type="text"
@@ -44,7 +65,7 @@ const Addnote = (props) => {
           </div>
           <div className="mb-3">
             <label htmlFor="description" className="form-label">
-              Description
+              Description :
             </label>
             <input
               type="text"
@@ -60,7 +81,7 @@ const Addnote = (props) => {
           </div>
           <div className="mb-3">
             <label htmlFor="tag" className="form-label">
-              Tag
+              Tag :
             </label>
             <input
               type="text"
@@ -74,7 +95,7 @@ const Addnote = (props) => {
           </div>
           <button
             type="submit"
-            className="btn btn-primary"
+            className="btn btn-primary mt-3"
             onClick={handleclick}
             disabled={note.title < 5 || note.description < 5}
           >
@@ -82,7 +103,7 @@ const Addnote = (props) => {
           </button>
         </form>
       </div>
-    </div>
+    </>
   );
 };
 
