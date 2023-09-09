@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# iNotebook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+iNoteboook is your note in cloud. 
 
-## Available Scripts
+Developed by MERN stack 
 
-In the project directory, you can run:
+Mongodb - A database for our application.
+Express - Node js web framework.
+React - Front end development framework of js.
+Node js - Javascript Web server.
 
-### `npm start`
+A brief note on all this :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+MongoDB is a popular NoSQL database known for its flexibility, scalability, and document-oriented structure. It stores data in JSON-like documents, making it ideal for modern, data-intensive applications.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Express is a minimalist and flexible Node.js web application framework. It simplifies building robust and efficient web APIs and applications, with middleware support for enhanced functionality and routing.
 
-### `npm test`
+React is a JavaScript library for building user interfaces. Developed by Facebook, it enables the creation of dynamic, interactive, and reusable UI components, simplifying the development of modern web applications.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Node.js is a server-side JavaScript runtime environment. It allows developers to build scalable, non-blocking, and event-driven applications, making it ideal for building high-performance web servers and APIs.
 
-### `npm run build`
+Main library used in our application :
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bycryptjs - The bcryptjs module in JavaScript is a library that provides a simple and secure way to hash passwords. It employs the bcrypt algorithm, adding a layer of security by salting and hashing user passwords, making it challenging for attackers to decipher them, enhancing application security and user data protection.Also against the rain table attacks.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+cors - The cors module in JavaScript for Node.js is essential for controlling Cross-Origin Resource Sharing. It enables or restricts access to resources on a web server from different domains, enhancing security by configuring the HTTP response headers, thereby preventing unauthorized cross-origin requests and potential security vulnerabilities in web applications.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+jsontoken - The jsonwebtoken module in JavaScript for Node.js facilitates secure authentication and authorization by creating and verifying JSON Web Tokens (JWT). It allows developers to generate tokens with embedded user data, ensuring secure transmission and verification of user identity, making it vital for modern web application authentication systems.
 
-### `npm run eject`
+React-router-dom - The react-router-dom module in JavaScript is a crucial tool for implementing client-side routing in React applications. It enables navigation between different views or components, maintaining a single-page application feel. Developers can define routes, manage history, and create dynamic, responsive user interfaces with smooth transitions in their web applications.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+How it works :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Firstly the user will be sent to home page of our application
+User has to register first. His credentials will be stored in the mongodb cloud
+Once After signup user is redirected to the login page
+After Successful login he will be redirected to user's homepage 
+Now he can Add his note, update or edit the added note and he can also remove the note.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Finally it is simple MERN application in the future it will be developed.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
