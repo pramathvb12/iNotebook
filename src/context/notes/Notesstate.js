@@ -6,7 +6,7 @@ const NoteState = (props) => {
   //     "name":"pb",
   //     "class":"7b"
   // }
-  const host = "http://localhost:5000";
+  const host = "https://i-notebook-api-three.vercel.app/";
   const initialState = [];
   const [notes, setNotes] = useState(initialState);
 
